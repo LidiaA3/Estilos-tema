@@ -1,0 +1,63 @@
+footer {
+    background-color: var(--color-chathams);
+    color: var(--color-light);
+    padding: 2rem 2rem 3rem 2rem;
+    display: flex;
+    gap: 30px 10px;
+    font-weight: 400;
+    font-size: 1.5rem;
+
+    @include mq ($bp-tablet) {
+        padding: 2rem calc((100% - $bp-tablet) / 2) 3rem calc((100% - $bp-tablet) / 2);
+    }
+
+    & img {
+        height: 50px;
+        object-fit: contain;
+        object-position: left;
+    }
+
+    & p {
+        margin: 0;
+    }
+}
+
+.footer {
+    &__tittle {
+        font-size: 2rem;
+    }
+
+    &__section {
+        display: flex;
+        gap: 1rem;
+        flex: 50%; //no funciona
+        background-color: red;
+    }
+
+    &__contact {
+        flex-direction: column;
+    }
+
+    &__menu-main {
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+    }
+
+    &__menu-secondary {
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
+    }
+
+    &__copyright {
+        justify-content: end;
+        align-items: end;
+    }
+}
+
+.sticky-footer {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - $heighttopbar);
+}

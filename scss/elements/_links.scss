@@ -1,0 +1,10 @@
+a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid;
+    font-weight: 400;
+
+    &:hover {
+        font-weight: 700;
+    }
+}

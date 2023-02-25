@@ -1,0 +1,87 @@
+.topbar {
+    height: $heighttopbar;
+    background-color: var(--color-charcoal);
+    color: var(--color-sand);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: fixed;
+    inset: 0 0 auto 0;
+
+    &__logo {
+        width: 15rem;
+    }
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: absolute;
+    inset: $heighttopbar 0 0 auto;
+    width: 80vw;
+    margin: 0;
+    height: calc(100vh - #{$heighttopbar});
+    z-index: 1;
+    padding: 2rem;
+    background-color: transparentize(hsl($color-charcoal) , 0.1);
+    transform: translateX(100%);
+    transition: all 1s ease-in-out;
+
+    @include mq ($bp-tablet) {
+        flex: 1;
+        flex-direction: row;
+        position: relative;
+        justify-content: right;
+        align-items: center;
+        height: auto;
+        width: auto;
+        inset: auto;
+        transform: none;
+    }
+
+    &-toggle{
+        cursor: pointer;
+
+        &__label {
+            margin: 0;
+        }
+
+        @include mq ($bp-tablet) {
+            display: none;
+        }
+
+        &__active {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__disactive {
+            display: none;
+        }
+    }
+
+    &__item {
+        list-style: none;
+        text-decoration: none;
+        font-weight: 400;
+        text-align: right;
+
+        & a {
+            border: none;
+        }
+    }
+}
+
+.menu-mobile-active {
+    transform: translateX(0);
+}
+
+.current-active-item {
+    border-bottom: 2px solid;
+    font-weight: 700;
+}

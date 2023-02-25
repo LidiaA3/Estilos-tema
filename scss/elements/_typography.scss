@@ -1,0 +1,29 @@
+$map-hi-sizes: (
+    '1': (4rem, 'GentiumBookBasic'),
+    '2': (3rem, 'GentiumBookBasic'),
+    '3': (2rem, 'GentiumBookBasic'),
+    '4': (2rem, 'JosefinSans'),
+    '5': (2rem, 'JosefinSans'),
+    '6': (1.5rem, 'JosefinSans')
+);
+
+@each $key, $value in $map-hi-sizes {
+    h#{$key},
+    .h#{$key} {
+        font-size: nth($value , 1);
+        font-family: nth($value , 2);
+
+        @if $key == '4' {
+            font-weight: 700;
+        }
+
+        @if $key == '5' {
+            font-style: italic;
+        }
+
+        @if $key == '6' {
+            font-weight: 300;
+            font-style: italic;
+        }
+    }
+}

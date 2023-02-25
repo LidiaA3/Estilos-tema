@@ -1,0 +1,30 @@
+button,
+.btn {
+    width: 100%;
+    height: 6rem;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-light);
+    background-color: var(--color-charcoal);
+    padding: 1rem;
+    border: none;
+    border-radius: .5rem;
+
+    @include mq ($bp-tablet) {
+        width: 32rem;
+    }
+
+    &:hover {
+        background-color: darken(hsl($color-charcoal), 10%);
+        font-weight: 400;
+    }
+}
+
+.btn--secondary {
+    color: var(--color-charcoal);
+    background-color: var(--color-sand);
+
+    &:hover {
+        background-color: darken(hsl($color-sand), 10%);
+    }
+}

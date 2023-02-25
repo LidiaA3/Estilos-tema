@@ -1,0 +1,18 @@
+html {
+    font-size: $unitdouble;
+}
+
+body {
+    margin: 0;
+    margin-top: $heighttopbar;
+    background-color: var(--color-light);
+    color: var(--color-charcoal);
+    font-size: 2rem;
+    font-family: 'JosefinSans';
+    font-weight: 300;
+}
+
+main {
+    padding: 3rem 2rem;
+    flex: 1; //para poner sticky-footer
+}
