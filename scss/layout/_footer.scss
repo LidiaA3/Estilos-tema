@@ -43,6 +43,7 @@ footer {
         flex-direction: column;
         justify-content: end;
         align-items: end;
+        text-align: right;
     }
 
     &__menu-secondary {
@@ -54,6 +55,7 @@ footer {
     &__copyright {
         justify-content: end;
         align-items: end;
+        text-align: right;
     }
 }
 

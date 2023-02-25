@@ -271,6 +271,7 @@ footer p {
 		flex-direction: column;
 		justify-content: end;
 		align-items: end;
+		text-align: right;
 }
 .footer__menu-secondary {
 		flex-direction: column;
@@ -280,6 +281,7 @@ footer p {
 .footer__copyright {
 		justify-content: end;
 		align-items: end;
+		text-align: right;
 }
 
 .sticky-footer {
