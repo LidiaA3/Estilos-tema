@@ -236,7 +236,8 @@ footer {
 		color: var(--color-light);
 		padding: 2rem 2rem 3rem 2rem;
 		display: flex;
-		gap: 30px 10px;
+		gap: 3rem 1rem;
+		flex-wrap: wrap;
 		font-weight: 400;
 		font-size: 1.5rem;
 }
@@ -260,8 +261,7 @@ footer p {
 .footer__section {
 		display: flex;
 		gap: 1rem;
-		flex: 50%;
-		background-color: red;
+		flex: 0 0 calc(50% - 0.5rem);
 }
 .footer__contact {
 		flex-direction: column;
